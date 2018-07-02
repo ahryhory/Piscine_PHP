@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>balloon</title>
+	<style type="text/css">
+		#balloon {
+			position: absolute;
+			width: 200px;
+			height: 200px;
+			top:0;
+    		bottom: 0;
+    		left: 0;
+    		right: 0;
+    		margin: auto;
+			background-color: red;
+			border-radius: 50%;
+		}
+	</style>
+	<script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+</head>
+<body>
+	<div id='balloon'"></div>
+	<script>
+		var color_up = ["green", "blue", "red"];
+		var color_down = ["blue", "green", "red"];
+
+		$("#balloon").click(function() {
+			var size = $( this ).css( "width" );
+			var new_size =  parseInt(size) + 10;
+
+			$( this ).css("background-color", color_up[0]);
+			color_up.push(color_up.shift());
+			if (new_size <= 420)
+				$( this ).width(new_size).height(new_size);
+			else
+				$( this ).width('200px').height('200px');
+		});
+
+		$("#balloon").mouseleave(function() {
+			var size = $( this ).css( "width" );
+			var new_size =  parseInt(size) - 5;
+
+			$( this ).css("background-color", color_down[0]);
+			color_down.push(color_down.shift());
+			if (new_size >= 200)
+				$( this ).width(new_size).height(new_size);
+		});
+	</script>
+</body>
+</html>

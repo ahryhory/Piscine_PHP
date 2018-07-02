@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>todo</title>
+	<style type="text/css">
+		#ft_list {
+			display: block;
+			margin: auto;
+			width: 820px;
+			min-height: 600px;
+    		border-radius: 2%;
+			background-color: #DCDCDC;
+		}
+		.ft_list {
+			display: block;
+			margin: auto;
+			width: 820px;
+			min-height: 600px;
+		}
+		#newList {
+			width: 35px;
+			height: 35px;
+			color: white;
+			margin-left: -30px;
+			margin-bottom: -10px;
+			background-color: #4CAF50;
+			box-shadow: -1px -1px 1px grey;
+			border-radius: 50%;
+		}
+		#newList:hover {
+			color: black;
+			background-color: white;
+		}
+	</style>
+	<script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+	<script src="todo.js"></script>
+</head>
+<body>
+	<div class="ft_list">
+		<button id="newList" onclick="newList()">new</button>
+		<div id="ft_list"></div>
+	</div>
+</body>
+</html>

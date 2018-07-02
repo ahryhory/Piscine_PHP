@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calc</title>
+	<style type="text/css">
+		#calc {
+			position: absolute;
+			width: 342px;
+			height: 50px;
+			top:0;
+    		bottom: 0;
+    		left: 0;
+    		right: 0;
+    		margin: auto;
+    		border-radius: 10%;
+			background-color: grey;
+		}
+		#leftMember {
+			position: absolute;
+			width: 90px;
+			height: 40px;
+    		left: 0;
+    		top: 1px;
+    		right: 0;
+    		border-radius: 10%;
+		}
+		#operators {
+			position: absolute;
+			width: 40px;
+			height: 40px;
+    		left: 103px;
+    		top: 5px;
+    		right: 0;
+    		border-radius: 10%;
+		}
+		#rightMember {
+			position: absolute;
+			width: 90px;
+			height: 40px;
+    		left: 150px;
+    		top: 1px;
+    		right: 0;
+    		border-radius: 10%;
+		}
+		#submit {
+			position: absolute;
+			width: 90px;
+			height: 40px;
+			top: 5px;
+    		left: 250px;
+    		right: 0;
+    		border-radius: 10%;
+		}
+	</style>
+	<script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="calc">
+	<input id="leftMember" type="text" name="leftText">
+	<select id="operators" name="operators">
+		<option value="+">+</option>
+		<option value="-">-</option>
+		<option value="*">*</option>
+		<option value="/">/</option>
+		<option value="%">%</option>
+	</select>
+	<input id="rightMember" type="text" name="rightText">
+	<input id="submit" type="submit" value="Try me!">
+</div>
+<script>
+		setInterval(function tick(){alert('Please, use me...');}, 30000);
+		$("#submit").click(function() {
+			var num1 = $('#leftMember').val();
+			var num2 = $('#rightMember').val();
+			var operator = $('#operators').val();
+
+			if (!$.isNumeric((num1)) || !$.isNumeric((num2)) || 
+				!Number.isInteger(parseFloat(num1)) || !Number.isInteger(parseFloat(num2)) ||
+				num1 < 0 || num2 < 0) {
+				alert('Error :(');
+				return;
+			}
+			if (num2 == 0 && (operator == '/' || operator == '%')) {
+				alert('It\u0027s over 9000!');
+				if (operator == '/')
+					var result = parseInt(num1) / parseInt(num2);
+				else if (operator == '%')
+					var result = parseInt(num1) % parseInt(num2);
+				console.log(result);
+				return;
+			}
+			if (operator == '+')
+				var result = parseInt(num1) + parseInt(num2);
+			else if (operator == '-')
+				var result = parseInt(num1) - parseInt(num2);
+			else if (operator == '*')
+				var result = parseInt(num1) * parseInt(num2);
+			else if (operator == '/')
+				var result = parseInt(num1) / parseInt(num2);
+			else if (operator == '%')
+				var result = parseInt(num1) % parseInt(num2);
+			alert(result);
+			console.log(result);
+		});
+	</script>
+</body>
+</html>

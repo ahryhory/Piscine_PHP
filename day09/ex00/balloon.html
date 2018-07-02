@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>balloon</title>
+	<style type="text/css">
+		#balloon {
+			position: absolute;
+			width: 200px;
+			height: 200px;
+			top:0;
+    		bottom: 0;
+    		left: 0;
+    		right: 0;
+    		margin: auto;
+			background-color: red;
+			border-radius: 50%;
+		}
+	</style>
+	<script type="text/javascript">
+		function growSize() {
+			var balloon = document.getElementById("balloon");
+			var color = balloon.style.backgroundColor;
+			var new_size = balloon.offsetWidth + 10;
+			
+			if (color == 'red' || color == '')
+				balloon.style.backgroundColor = 'green';
+			else if (color == 'green')
+				balloon.style.backgroundColor = 'blue';
+			else if (color == 'blue')
+				balloon.style.backgroundColor = 'red';
+			if (new_size <= 420) {
+				balloon.style.width = new_size + 'px';
+				balloon.style.height = new_size + 'px';
+			}
+			else {
+				balloon.style.width = '200px';
+				balloon.style.height = '200px';
+			}
+		}
+
+		function shrinkSize() {
+			var balloon = document.getElementById("balloon");
+			var color = balloon.style.backgroundColor;
+			var new_size = balloon.offsetWidth - 5;
+			
+			if (color == 'red' || color == '')
+				balloon.style.backgroundColor = 'blue';
+			else if (color == 'blue')
+				balloon.style.backgroundColor = 'green';
+			else if (color == 'green')
+				balloon.style.backgroundColor = 'red';
+			if (new_size > 200) {
+				balloon.style.width = new_size + 'px';
+				balloon.style.height = new_size + 'px';
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id='balloon' onclick="growSize()" onmouseleave="shrinkSize()"></div>
+</body>
+</html>

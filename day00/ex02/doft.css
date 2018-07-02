@@ -1,0 +1,161 @@
+body
+{
+	background-color: #505050;
+}
+div#header
+{
+	width: 1230px;
+	height: 125px;
+	margin-top: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 10px;
+    background: #909090;
+    box-shadow: 8px 8px 7px black;
+}
+div#middle
+{
+	width: 1170px;
+	height: 500px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 15px;
+}
+div#content
+{
+	display: inline-block;
+	width: 880px;
+	height: 500px;
+	margin-left: 25px;
+	border-radius: 10px;
+    background: #909090;
+    box-shadow: 8px 8px 7px black;
+}
+div#menu-1
+{
+	display: inline-block;
+	width: 120px;
+	height: 365px;
+	padding-top: 10px;
+	float: left;
+	border-radius: 10px;
+    background: #909090;
+    box-shadow: 8px 8px 7px black;
+}
+div#menu-2
+{
+	display: inline-block;
+	width: 120px;
+	height: 365px;
+	padding-top: 10px;
+	float: right;
+	border-radius: 10px;
+    background: #909090;
+    box-shadow: 8px 8px 7px black;
+}
+div#form
+{
+	position: absolute;
+	width: 450px;
+	height: 150px;
+	margin-top: -60px;
+	margin-left: -70px;
+	border-radius: 10px;
+    background: #88FF89;
+    box-shadow: 8px 8px 7px black;
+    z-index: 1;
+}
+div#brick
+{
+	margin-left: 3px;
+	width: 115px;
+	height: 70px;
+	background-image: url(resources/brick.jpg);
+}
+img#day_of_the_42
+{
+	width: 365px;
+	height: 100px;
+	float: left;
+	margin: 10px 0px 0px 10px;
+}
+img#loupe
+{
+	height: 130px;
+	width: 220px;
+	float: right;
+	margin: 10px 0px 0px 0px;
+}
+img#reload
+{
+	height: 18px;
+	width: 17px;
+	float: right;
+	margin: 10px 10px 0px 0px;
+}
+img#close
+{
+	height: 18px;
+	width: 17px;
+	float: right;
+	margin: 100px -18px 0px 0px;
+}
+img#cluster
+{
+	height: 480px;
+	width: 860px;
+	float: right;
+	margin: 10px 10px 10px 10px;
+}
+img.menu-1
+{
+	height: 60px;
+	width: 60px;
+	margin: 5px 0px 0px 30px;
+}
+img.menu-2
+{
+	margin: 5px 0px 0px 30px;
+}
+img.menu-2-1
+{
+	height: 85px;
+	width: 65px;
+}
+img.menu-2-2
+{
+	height: 48px;
+	width: 65px;
+}
+img.red-border
+{
+	border-style: solid;
+	border-color: red;
+	border-width: 4px;
+	border-radius: 3px;
+}
+p#text
+{
+	margin-left: 6px;
+	margin-bottom: 0; 
+	font-family: verdana; 
+	font-size: 14px;
+}
+span#word
+{
+	font-size: 30px;
+	font-family: serif;
+}
+span#word-shadow
+{
+	text-shadow: 4.5px 4.5px 3.3px #FF0000;
+}
+span#italic
+{
+	font-style: italic;
+}
+input[type="text"]
+{
+	margin-top: 0;
+	margin-left: 10px;
+}
